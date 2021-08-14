@@ -1,0 +1,42 @@
+@import "./color";
+@import "./fonts";
+
+@mixin nav_text($color) {
+  color: $color;
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+@mixin button($border, $background, $color) {
+  margin: 1rem;
+  padding: 0.6rem 1rem;
+  background: $background;
+  color: $color;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border: $border;
+  margin-top: 2rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+@mixin button-hover($background, $color) {
+  background: $background;
+  color: $color;
+}
+
+@mixin about_font_family {
+  font-family: "Overpass", sans-serif;
+}
+
+// median query mixing
+@mixin mobile {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}

@@ -1,0 +1,10 @@
+@import "./components/_index.scss";
+@import "./components/about";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}

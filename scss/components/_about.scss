@@ -1,0 +1,255 @@
+@use "../global/fonts";
+@import "../global/color";
+@import "../global/variables";
+.about {
+  position: relative;
+  overflow: hidden;
+  @include mobile {
+  }
+  .title {
+    margin-top: 5rem;
+    h1 {
+      text-align: center;
+      font-family: "Overpass", sans-serif;
+      font-size: 3rem;
+      color: $desaturated-blue;
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .column {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    @include mobile {
+      // background: chartreuse;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .row {
+    width: 70%;
+    margin: auto;
+    @include mobile {
+      width: 85%;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.8rem;
+      @include about_font_family;
+      color: $desaturated-blue;
+      line-height: 5rem;
+      @include mobile {
+        line-height: 2rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+    p {
+      font-family: "Overpass", sans-serif;
+      line-height: 1.7rem;
+      width: 90%;
+      color: $gray-blue;
+      @include mobile {
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+
+  .image {
+    margin-right: -10rem;
+    @include mobile {
+      margin-right: 0rem;
+    }
+    .editdesktop {
+      width: 40rem;
+      @include mobile {
+        display: none;
+        width: 20rem;
+        margin-top: 4rem;
+        margin-left: 1rem;
+      }
+    }
+    .editmoble {
+      display: none;
+      @include mobile {
+        // display: block;
+        width: 23rem;
+        margin-top: 2rem;
+        display: block;
+      }
+    }
+  }
+}
+.about_structure {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin-top: 16rem;
+    background-size: 30rem;
+    background-position-y: -100%;
+    background-position-x: 45%;
+  }
+  .mobiles {
+    @include mobile {
+      width: 100%;
+      margin-top: -12rem;
+    }
+  }
+  position: relative;
+  margin-top: 5rem;
+  background: $gray-blue;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/app/images/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position-y: 80%;
+  background-position-x: -45%;
+  background-size: 55rem;
+  border-bottom-left-radius: 6rem;
+  border-top-right-radius: 6rem;
+  .content {
+    width: 50%;
+    margin-left: 5rem;
+    @include mobile {
+      width: 90%;
+      margin: auto;
+    }
+    h2 {
+      color: $White-text;
+      @include about_font_family;
+      font-size: 2.3rem;
+      line-height: 5rem;
+      @include mobile {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 2rem;
+      }
+    }
+    p {
+      @include about_font_family;
+      color: $White-text;
+      width: 70%;
+      line-height: 1.5rem;
+      font-size: 16px;
+      @include mobile {
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        margin-top: 1.2rem;
+      }
+    }
+  }
+}
+
+.about_blogr {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  display: flex;
+  align-items: center;
+  margin-top: 10rem;
+  justify-content: center;
+
+  .content {
+    flex-wrap: wrap;
+    width: 40%;
+    margin-left: 5rem;
+    @include mobile {
+      text-align: center;
+      width: 90%;
+      margin: auto;
+    }
+  }
+  .laptop_img {
+    width: 45rem;
+    margin-left: -26rem;
+    @include mobile {
+      display: none;
+    }
+  }
+  .laptop_mobile_img {
+    display: none;
+    @include mobile {
+      margin: auto;
+      display: block;
+      width: 100%;
+    }
+  }
+  h1 {
+    line-height: 6rem;
+    @include about_font_family;
+    color: $gray-blue;
+  }
+  p {
+    @include about_font_family;
+    color: $gray-blue;
+    line-height: 1.7rem;
+  }
+}
+
+// footer styling
+.footer {
+  @include mobile {
+    height: auto;
+  }
+  background: $footer-background;
+  margin-top: 5rem;
+  height: 53vh;
+  border-top-right-radius: 6rem;
+  .footer_nav {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 85%;
+    height: 90%;
+    position: relative;
+    @include mobile {
+      width: auto;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      @include mobile {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+      }
+      .title {
+        margin: 5rem;
+        @include mobile {
+          margin: 0px;
+          margin-top: 3rem;
+        }
+        h5 {
+          font-size: 1.3rem;
+          color: $White-text;
+          @include about_font_family;
+          font-weight: 800;
+          margin-bottom: 1.5rem;
+        }
+        a {
+          text-decoration: none;
+          color: $footer-text;
+          @include about_font_family;
+          line-height: 2rem;
+
+          &:hover {
+            border-bottom: 2px solid $footer-text;
+          }
+        }
+      }
+    }
+  }
+}
