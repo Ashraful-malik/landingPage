@@ -1,5 +1,10 @@
+// font family
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+// components
 @import "./components/_index.scss";
 @import "./components/about";
+
 * {
   margin: 0;
   padding: 0;
