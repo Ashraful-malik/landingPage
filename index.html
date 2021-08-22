@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="./scss/style.css" />
     <link
       rel="stylesheet"
@@ -18,17 +25,43 @@
     <section class="hero">
       <nav>
         <div class="navbar">
-          <!-- <img src="./images/icon-hamburger.svg" class="hamburger" /> -->
-          <img src="./images//logo.svg" alt="logo" class="logo" />
-          <ul class="nav_link">
+          <div class="logo">
+            <img src="./images//logo.svg" alt="logo" />
+            <img
+              src="./images/icon-hamburger.svg"
+              class="hamburger_icon"
+              id="imgClickAndChange"
+              onclick="myFunction()"
+            />
+          </div>
+          <ul class="nav_link" id="hideShow">
             <li>
               <a href="#" class="nav_links">
-                Product <img src="./images/icon-arrow-light.svg" alt="" />
+                Product
+                <img
+                  src="./images/icon-arrow-light.svg"
+                  alt=""
+                  class="arrow_light"
+                />
+                <img
+                  src="./images/icon-arrow-dark.svg"
+                  alt=""
+                  class="arrow_dark"
+                />
               </a>
             </li>
             <li>
               <a href="#" class="nav_links">
-                Company<img src="./images/icon-arrow-light.svg" alt="" />
+                Company<img
+                  src="./images/icon-arrow-light.svg"
+                  alt=""
+                  class="arrow_light"
+                />
+                <img
+                  src="./images/icon-arrow-dark.svg"
+                  alt=""
+                  class="arrow_dark"
+                />
               </a>
             </li>
             <li class="dropdown">
@@ -37,7 +70,12 @@
                 <img
                   src="./images/icon-arrow-light.svg"
                   alt=""
-                  class="down_arrow"
+                  class="arrow_light"
+                />
+                <img
+                  src="./images/icon-arrow-dark.svg"
+                  alt=""
+                  class="arrow_dark"
                 />
               </a>
               <div class="dropdown_content">
@@ -46,12 +84,13 @@
                 <a href="#">Linkedin</a>
               </div>
             </li>
+            <div class="nav_btn">
+              <button type="submit" class="login_btn">Login</button>
+              <button type="submit" class="signup_btn">Sign Up</button>
+            </div>
           </ul>
-          <div class="nav_btn">
-            <button type="submit" class="login_btn">Login</button>
-            <button type="submit" class="signup_btn">Sign Up</button>
-          </div>
         </div>
+        <!-- </div> -->
       </nav>
       <section class="content">
         <div class="title">
@@ -181,5 +220,7 @@
         </ul>
       </div>
     </section>
+    <!-- js -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
